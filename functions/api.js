@@ -5,6 +5,6 @@ require("dotenv").config();
 
 app.use(express.json());
 
-app.use("/.netlify/functions/api", require("./routes/index-route"));
+app.use("/.netlify/functions/api", require("../routes/index-route"));
 
 module.exports.handler = serverless(app);
