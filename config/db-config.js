@@ -7,7 +7,7 @@ const connectDB = async () => {
   if (!connection) {
     try {
       connection = await mongoose.connect(
-        "mongodb://127.0.0.1:27017/task_management",
+        "mongodb+srv://ksrmk437:roKuyWkDdOeXUm3H@cluster0.fjytmsi.mongodb.net/task_management",
         {
           useNewUrlParser: true,
           useUnifiedTopology: true,
