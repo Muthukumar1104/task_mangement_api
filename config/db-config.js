@@ -6,10 +6,13 @@ let connection;
 const connectDB = async () => {
   if (!connection) {
     try {
-      connection = await mongoose.connect("mongodb://127.0.0.1:27017/edu", {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      });
+      connection = await mongoose.connect(
+        "mongodb://127.0.0.1:27017/task_management",
+        {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+        }
+      );
       console.log(`MongoDB connected:${mongoose.connection.host}`);
     } catch (err) {
       console.error("MongoDB connection failed", err);

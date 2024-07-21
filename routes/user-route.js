@@ -1,12 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
-const {
-  usersignup,
-  userlogin,
-  userupdate,
-  userview,
-} = require("../controllers/userController");
+const { usersignup, userlogin } = require("../controllers/userController");
 const { requestHandler, verifytoken } = require("../utils/common");
 
 router.post(
@@ -51,7 +46,6 @@ router.post(
       .isEmail()
       .withMessage("Invalid mail ID"),
     check("password").notEmpty().withMessage("Password is required"),
-    check("role").notEmpty().withMessage("Role is required"),
   ],
   (req, res) => {
     const errors = validationResult(req).array();

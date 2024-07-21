@@ -22,20 +22,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  status: {
-    type: Number,
-    enum: [0, 1, 2], 
-    default: 1,
-  },
   cdate: {
     type: Date,
     default: Date.now,
   },
   mdate: {
-    type: Date,
-    default: Date.now,
-  },
-  ddate: {
     type: Date,
     default: Date.now,
   },

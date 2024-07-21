@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
   res.send("Success!");
 });
 
-app.use("/edu", require("./routes/index-route"));
+app.use("/api", require("./routes/index-route"));
 
 const Port = process.env.port || 4000;
 app.listen(Port, () => {
