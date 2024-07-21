@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
   res.send("Success!");
 });
 
-app.use("/.netlify/functions/api", require("./routes/index-route"));
+app.use("/.netlify/functions/api", require("../routes/index-route"));
 
 const Port = process.env.port || 4000;
 app.listen(Port, () => {
