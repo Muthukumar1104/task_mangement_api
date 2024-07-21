@@ -2,8 +2,9 @@ const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
 const { usersignup, userlogin } = require("../controllers/userController");
-const { requestHandler, verifytoken } = require("../utils/common");
+const { requestHandler } = require("../utils/common");
 
+// User signup
 router.post(
   "/signup",
   [
@@ -37,6 +38,7 @@ router.post(
   }
 );
 
+// User login
 router.post(
   "/login",
   [
